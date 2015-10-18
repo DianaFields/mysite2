@@ -1,4 +1,6 @@
-
+*{
+	border:0;
+}
 @font-face{
 	font-family: my-Font;
 	src:url(../fonts/TheSans-9-BlackCaps.otf);
@@ -20,7 +22,8 @@ nav{
 	margin: 0 auto;
 	position: fixed;
 	text-align: center;
-	background-color:rgba(255,255,255,0.8)
+	background-color:rgba(255,255,255,0.8);
+	z-index: +5;
 }
 section{
 	width: 100%;
@@ -37,42 +40,28 @@ section{
 	width: 65%;
 	margin: 0 auto;
 	height:auto;
+	margin-top: -15px;
 }
 
 #logo{
-	background: url('../images/logo.png')no-repeat;
-	background-size: 80px;
 	width: 30%;
 	height: 95px;
 	display: inline-block;
-	background-position:0 1em;
 	cursor: pointer;
 	float: left;
+	text-align: left;
+	padding-top: 1em;
 }
-
+#logo img{
+	width: 25%;
+	cursor: pointer;
+}
 
 .lab-effect a{
 	width: auto;
 	text-decoration: none;
 	color: #333;
 }
-/*.lab-effect a::before{
-	position: absolute;
-	left: 0;
-	overflow: hidden;
-	padding: 0 0 10px 54.65px;
-	max-width: 0;
-	color:#f44f7e;
-	content: attr(lab-hover);
-	-webkit-transition: max-width 0.5s;
-	-moz-transition: max-width 0.5s;
-	transition: max-width 0.5s;
-}
-.lab-effect a:hover::before,
-.lab-effect a:focus::before{
-	max-width: 100%;
-
-}*/
 .mmenu{
 	display: inline-block;
 	width: 70%;
@@ -94,6 +83,9 @@ background: #f44f7e;
 	color: white;
 background: #cccccc;	
 }
+.labDrop li:hover{
+	background-color:#cccccc!important;
+}
 .labels li{
 	font-family: my-Fontreg;
 	display: inline-block;
@@ -111,7 +103,7 @@ background: #cccccc;
 	position: relative;
 }
 .logoo{
-	height: 320px!important;
+	height: 320px;
 }
 .btn-me span{
 }
@@ -124,9 +116,12 @@ background: #cccccc;
 	background-color: #eeeeee;
 }
 .ciao{
-	display: inline-table;
-	position: absolute;
-	margin: 20% 0 0 43%;
+	display: inline-block;
+    position: absolute;
+    margin: 13.5% auto;
+    text-align: center;
+    width: 100%;
+    height: auto;
 
 }
 .ciao img{
@@ -196,16 +191,6 @@ article{
 	cursor: pointer;
 
 }
-/*border*/
-/*.logo:after{
-	content: '';
-	position: absolute;
-	width: 100%;
-	pointer-events: none;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-}*/
-
 .logo:hover::after{
 	position: absolute;
 	z-index: 9999;
@@ -309,23 +294,56 @@ article{
 	display: block;
 }
 .web-eg{
-	background: url(../images/web-1.png)no-repeat;
+	background: url(../images/web-1h.png)no-repeat;
 	background-size: cover;
 	width: 100%;
 	height: 300px;
 }
+.nextPage{
+	text-align: center;
+	font-size: 50px;
+	font-family: my-Fontreg;
+}
+.nextPage p{
+	color: #c0df16;
+	padding-top: 80px;
+	font-weight: 800;
+}
+.page{
+	background: black;
+	background-size: cover;
+	width: 100%;
+	height: 300px;
+}
+.page:hover{
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 300px;
+}
+.web-eg:hover{
+	background: url(../images/web-1.png)no-repeat;
+	background-size: cover;
+
+}
 .corp-cc{
-	background: url(../images/carel-0.jpg)no-repeat;
+	background: url(../images/carel-0h.jpg)no-repeat;
 	background-size:cover;
 	width: 100%;
 	height:300px;
-
+}
+.corp-cc:hover{
+	background: url(../images/carel-0.jpg)no-repeat;
+	background-size:cover;
 }
 .iden-pet{
-	background: url(../images/iden-0.jpg)no-repeat;
+	background: url(../images/iden-0h.jpg)no-repeat;
 	background-size: cover;
 	width: 100%;
 	height: 300px;
+}
+.iden-pet:hover{
+	background: url(../images/iden-0.jpg)no-repeat;
+	background-size: cover;
 }
 .corp-cc img{
 	width: 100%;
@@ -418,6 +436,7 @@ footer{
 	width: 100%;
 	display: block;
 	transition-duration: .7s;
+	z-index: +1;
 }
 
 .about-me--active{
@@ -426,7 +445,32 @@ footer{
 	opacity: 1;
 	transition-duration: .7s;
 }
+/*contact Form*/
 
+.hojaContact{
+	margin: 0 auto;
+	width: 30%;
+	text-align: center;
+	margin-top: 20%;
+	font-size: 14px;
+}
+.hojaContact span{
+	border-bottom:  1px solid gray;
+	vertical-align: middle;
+}
+.hojaContact input{
+	color: white;
+	background:none;
+	width: 80%;
+	border: none;
+
+}
+.hojaContact textarea{
+	color: white;
+	background:none;
+	width: 80%;
+	border: none;
+}
 /*overlay*/
 .overlay {
 	position: fixed;
@@ -544,9 +588,9 @@ footer{
 
 .about-me{
 	position: fixed;
-	height: 330px;
+	height: 380px;
 	width: 100%;
-	margin: 5.8em auto;
+	margin: 5.9em auto;
 	display: block;
 	-webkit-transition: height .5s, -webkit-transform 2s;
     transition: height .5s, transform 2s;
@@ -554,25 +598,62 @@ footer{
 .bio-me{
 	display: none;
 	background: black;
-	height: 280px;
+	height: 450px;
 	width: 65%;
 	margin: 0 auto;
 	-webkit-transition: height .5s, -webkit-transform 2s;
     transition: height .5s, transform 2s;
+}
+.menuClose{
+	display: none;
+	background: rgba(0,0,0,0.7);
+	height: 150px;
+	width: 15%;
+	margin:-10px 0 0 67.5%;
+	-webkit-transition: height .5s, -webkit-transform 2s;
+    transition: height .5s, transform 2s;
+}
+.menuShow{
+	display: block;
+}
+.menuClose section ul li{
+	margin:0 auto;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	width: 98%;
+	border-bottom: dotted white 1px;
+}
+.menuClose section ul li a:hover{
+	color: #f44f7e;
+}
+.menuClose section a{
+	color: white;
+	text-decoration: none;
+}
+.menuClose section ul{
+	padding: 15px 0 0 15px;
+	list-style: none;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
 }
 .bio-me section{
 	font-size: 20px;
 	font-family: my-Fontsem;
 	width: 70%;
 	color: #cccccc;
-	display: inline-block;
+	height:100%;
+	margin:  7% auto;
+	float: right;
+	padding-right: 1em;
 }
 h3{
 	font-size: 15px;
 }
 .bio-me img{
 	width: 20%;
-	margin:3% 0 0 3%;
+	margin:5% 0 0 3%;
 }
 .bio-show{
 	display: block;
@@ -620,76 +701,161 @@ h3{
 .txt-mobile{
 	display: none;
 }
+/*temporal contacto*/
+.contactTemp{
+	width: 60%;
+	display: inline-block;
+	height: 100px;
+	margin: 8% auto;
+}
+.instagram{
+	display: none;
+}
+.send-me, .research, .tw{
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+}
+.findMe{
+	text-align: center;
+	width: 100%;
+	margin-top: 15%;
+}
+.findMe img{
+	margin: 0 auto;
+	width: 20%;
+}
+.minHi{
+	font-size: 15px;
+	color: #f44f7e;
+}
+@media screen and (max-width: 1024px){
+	nav{
+		height: 70px;
+	}
+	.header{
+		width: 100%;
+	}
+	#logo{
+		margin-left: 110px;
+		height: 60px;
+		padding-top:10px;
+	}
+	#logo img{
+		width: 20%;
+	}
+	.mmenu{
+		width: 40%;
+		height: 60px;
+	}
+	.menuClose{
+		width: 210px;
+	}
+	.labels{
+		height: 60px;
+		line-height: 60px;
+	}
+	.labels li{
+		padding-top: 10px;
+		height: 60px;
+	}
+	.txt-mobile{
+		display: block;
+		font-size: 11px;
+		font-family: my-Fontsem;
+		padding: 0;
+		margin:-30px 0 0 0;
+		width: 100%;
+		display: block;
+		color: gray;
+	}
+}
 @media screen and (max-width: 768px){
 	.mmenu{
 		height: 120px;
-		width: 80%;
+		width: 70%;
 		margin-left: 9%;
 	}
 	nav{
-		height: 120px;
+		height: 80px;
 	}
 	article figure{
 		margin: inherit;
 	}
 	h1{
-		font-size: 1.5em !important;
+		font-size: 35px !important;
 		margin: 0 !important;
+		text-align: center;
 	}
 
 	.header{
-		width: 90%;
+		width: 100%;
 	}
 	.main{
 		width: 90%;
 	}
 	.intro{
 		width: 90%;
-		padding-top: 9%;
+		padding-top: 4%;
 	}
 	.intro img{
 		padding-top: 3.3em;
 	}
 	
-
+	.ciao{
+		margin-top: 20%;
+	}
 	.ciao img{
-		display: none;
+		width: 80%;
 	}
 	#logo{
+		padding-top: 10px;
 		width: 11%;
 		height: 90px;
 		display: block;
 		background-size: contain;
-		margin: 0 auto;
+		margin: 0 0 0 30px;
+	}
+	#logo img{
+		width: 85%;
+	}
+	.logoo{
+		height: 580px!important;
 	}
 	.logo{
 		width: 85%;
 		height: 200px;
 	}
-	.logo-1, .logo-2, .logo-3 {
+	.logo-1, .logo-2 {
 		background-size: 45%;
-		height: 155px;
+		height: 250px;
 	}
 	.logo-5, .logo-6{
 		background-size: 55%;
-		margin-top: -15px;
+		margin:0 auto;
+		height: 250px;
+	}
+	.logo-3{
+		height: 200px;
 	}
 	.logo-4{
-		background-size: 25%;
-		margin-top: -20px;
+		background-size: 32%;
+		margin: 35px auto;
 	}
 	.labels{
 		border-top: solid 1px #cccccc;
-		height: 120px;
+		height: 80px;
+		line-height: 80px;
 	}
 	.labels ul{
 		width: 200px;
-		height: 200px;
+		height: 80px;
 		margin-top: 55px;
 		position: absolute;	
 	}
 	.about-me{
-		height: 600px;
+		height: 700px;
+		margin: 5% auto;
 	}
 	.about-me li{
 		width: 150px;
@@ -699,7 +865,7 @@ h3{
 	.labels li {
 		color: black;
 		font-size: 18px;
-		height: 120px;
+		height: 80px;
 		color: #f44f7e;
 		
 	}
@@ -712,9 +878,9 @@ h3{
 		width: 45%;
 	}
 	.bio-me{
-		margin-top: 30px;
+		margin-top: 40px;
 		width: 692px;
-		height: 600px;
+		height: 700px;
 	}
 	.bio-me img{
 		width: 40%;
@@ -722,19 +888,42 @@ h3{
 		display: block;
 	}
 	.kill_ok{
-		margin: 5% 5.5% 0 0;
+		margin: 8% 7% 0 0;
 	}
 	.about-me section{
 		width: 100%;
 		display: block;
 		text-align: center;
+		padding:0;
 	}
-	
+	.txt-mobile{
+		display: block;
+		font-size: 11px;
+		font-family: my-Fontsem;
+		padding: 0;
+		margin:-30px 0 0 0;
+		width: 100%;
+		display: block;
+		color: gray;
+	}
+
+	.inter div{
+		text-align: center;
+		vertical-align: middle;
+		padding-top: 16px;
+	}
+	.menuClose{
+		width: 220px;
+		margin: 45px 0 0 525px;
+	}
+	.labels li{
+		padding:0;
+	}
 }
 
 @media screen and (max-width: 414px){
 	nav{
-		height: 105px;
+		height: 120px;
 	}
 	article figure{
 		margin: inherit;
@@ -761,33 +950,36 @@ h3{
 		height: auto;
 	}
 	.intro{
-		width: 90%;
-		padding-top: 9%;
+		width: 100%;
+		padding-top: 10%;
 	}
 	.intro img{
-		padding-top: 5em !important;
+		padding-top: 22% !important;
 	}
 	
 	.labels{
 		width: 100%;
 		line-height: 40px;
-		height: 40px;
+		height: 37px;
 	}
 	.labels li{
 		width: 49%;
-		height: 40px;
+		height: 38px;
 		font-size: 16px;
-
 	}
-	.ciao img{
-		display: none;
+	.inter li{
+		width: 19%;
 	}
 	#logo{
 		width: 100%!important;
 		background-position: center;
-		height: 65px;
+		height: 55px;
 		display: block;
 		background-size: 17%;
+		text-align: center;
+	}
+	#logo img{
+		width: 15%;
 	}
 	.logo-cont{
 		margin: 0 auto;
@@ -852,24 +1044,29 @@ h3{
 		background-position: center;
 	}
 	.bio-show{
-		margin-top: 1em;
+		margin-top: 15px;
 	}
 	.about-me{
-		height: 370px;
+		height: 700px;
 	}
 	.bio-me{
 		width: 100%;
 		text-align: center;
 	}
 	.bio-me img{
-		width: 40%;
+		width: 35%;
 		text-align: center;
 		margin: 0 auto !important; 
 	}
 	.bio-me section{
-		width: 100%;
+		width: 98%;
 		text-align: center;
-		margin: 0 auto;
+		margin-top: -10px;
+		padding:0;
+	}
+	.bio-me section p{
+		width: 95%;
+		font-size:16px;
 	}
 	.kill_ok {
     width: 14%;
@@ -892,4 +1089,57 @@ h3{
 footer{
 		margin-top: 50%;
 	}
+	.contactTemp{
+		width: 100%;
+		margin: 20% 0;	
+	}
+	.send-me, .instagram, .tw{
+		display:block;
+		text-align: center;
+		width: 90%;height: 100px;
+		margin: 0 auto;
+	}
+	.research{
+		display: none;
+	}
+	.findMe img{
+		width: 60%;
+	}
+	.ciao img{
+		margin-top: 25%;
+	}
+}
+
+@media screen and (max-width: 320px){
+	nav{
+		height: 105px;
+	}
+	article figure{
+		margin: inherit;
+	}
+	.mmenu{
+		width: 100%;
+		height: 40px;
+		margin-left: 0;
+	}
+	.cbp-hrmenu{
+		height: 40px;
+	}
+	.ciao img{
+		margin-top: 30%;
+	}
+	.intro{
+		padding-top: 12%;
+	}
+	.menuShow section{
+		width: 100px;
+	}
+	.menuClose{
+		width: 100%;
+		margin:9% 0 0 30%;
+	}
+	.menuClose section ul li{
+		width: 200px;
+	}
+
 }

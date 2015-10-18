@@ -1,4 +1,15 @@
 
+		function aboutMe(){
+			$( "#about-me" ).addClass( "about-me");
+			$( ".bio-me" ).addClass( "bio-show");
+			$( ".kill_me" ).addClass( "kill_ok");
+		}
+		function closeBio(){
+			$( "#about-me").removeClass('about-me');
+			$( ".bio-me").removeClass('bio-show');
+			$( ".kill_me").removeClass( 'kill_ok');
+		}
+	
 (function() {
 				[].slice.call( document.querySelectorAll( '.about-me' ) ).forEach( function( el ) {
 					var openCtrl = el.querySelector( '.btn-me' ),

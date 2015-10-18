@@ -8,7 +8,7 @@
 		<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<script src="js/jquery-1.11.3.js" type="text/javascript"></script>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="js/classie.js"></script>
 		<script src="js/modernizr.custom.js"></script>
 
@@ -25,7 +25,9 @@
 	<body>
 		<nav>
 				<div class="header">
-					<div id="logo"></div>
+					<div id="logo">
+						<img src="images/logo.png">
+					</div>
 								<div class="mmenu" id="show-drop">
 										<div id="cbp-hrmenu" class="cbp-hrmenu"> 
 											<ul class="labels">
@@ -49,14 +51,13 @@
 
 				<img src="images/polaroid_dian.png">
 				<section>
-					<p>
-						<span class="pinky">D</span>iseño Web
-						<span class="green">E</span>xperiencia de usuario
-						<span class="orange">I</span>dentidad Gráfica</p>
-						<p><span class="white">HTML5  |  </span>
-						<span class="white">CSS3  |  </span>
-						<span class="white">Responsive Design</span></p>
-					<h3>Libros Cajitas Café</h3>
+					<p><span class="pinky">Hello!</span></p> 
+					<p>My name is Diana Campos I'm a graphic designer from Mexico.</p> 
+					<p>What I like the most about designing is to have the opportunity to 
+						show the world in too many ways without limits.</p>
+						<p>I hold special interest in multidisciplinary communication.</p>
+						<p><span class="pinky">Thank you for stoping by and please come back!</span></p>
+				
 				</section>
 			</div>
 		
@@ -64,19 +65,52 @@
 		
 		<div class="overlay overlay-hugeinc txt-contact">
 			<button type="button" class="overlay-close">Close</button>
-			<div class="contact-me">
-				<form class="txt-me">
-				<input class="enter-info mask" type="name" name="name" placeholder="¿Cómo te llamas?">
-				<input class="enter-info mail" type="e-mail" name="e-mail" placeholder="Deja tu e-mail">
-				<textarea class="enter-info talk" type="text" name="coment" rows="10" placeholder="Déjame un mensaje"></textarea>
-				</form>
-				<div class="btn-send">
-
+	<div class="contact-me">
+		<div class="findMe">
+				<img src="images/find-me.png">
+		</div>
+				
+		<div class="contactTemp">
+			<div class="send-me">
+				<a target="_blank" href="mailto:di.disegno@gmail.com?Subject=Hello">
+					<img src="images/mail-me.png">
+				</a>
+				</div>
+				<div class="instagram">
+				<a href="https://instagram.com/dianfields/">
+					<img src="images/insta.png">
+				</a>
+				</div>
+				<div class="research">
+				<a target="_blank" href="http://132.248.9.195/ptd2014/octubre/306001688/Index.html">
+					<img src="images/resc.png">
+				</a>
+				</div>
+				<div class="tw">
+				<a target="_blank" href="https://twitter.com/fields_4ever">
+					<img src="images/twitter.png">
+				</a>
 				</div>
 			</div>
+
+		<!-- <form name="contactform" class="hojaContact" method="post" action="send_form_email.php">
+			 <span>
+		  		<input placeholder="Nombre"  type="text" name="name" maxlength="50" size="30">
+		 	 </span>
+		  	<span>
+		  		<input placeholder="E-mail"   type="text" name="email" maxlength="50" size="30">
+		  	</span>
+		  	<span>
+		  		<textarea placeholder="Deja tus comentarios" name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+		  	</span>
+		  	 <input type="submit" value="Send" class="btn-send">
+		</form> -->
+</div>
+			
 		</div>
+
 		<section>
-			<!-- <span class="ciao"><img src="images/ciao.gif"></span> -->
+			<span class="ciao"><img src="images/welcome.png"></span>
 			<article>
 				<figure class="intro">
 				<img src="images/background.jpg"></figure>
@@ -85,32 +119,41 @@
 		
 		<section class="main">
 			<article class="item web">
-				<h1>Diseño<span class="pinky">W</span>eb</h1>
-				<figure class="web-eg">
+				<h1><span class="pinky"></h1>
+				<figure onclick="window.location.href='page/index.html'" class="page">
+					<span class="nextPage"><p>The Next Page</p></span>
 				</figure>
 					<div class="overlay overlay-hugeinc">
 						<button type="button" class="overlay-close">Close</button>
 						<div class="contact-me">
-			</div>
+						</div>
 					</div>
-
-
+			</article>
+			<article class="item web">
+				<h1><span class="pinky">W</span>eb Design</h1>
+				<figure onclick="window.location.href='web/index.html'" class="web-eg">
+				</figure>
+					<div class="overlay overlay-hugeinc">
+						<button type="button" class="overlay-close">Close</button>
+						<div class="contact-me">
+						</div>
+					</div>
 			</article>
 			<span class="line"></span>
 
 			<article class="item">
-				<h1>Papelería<span class="orange">C</span>orporativa</h1>
-				<figure class="corp-cc"></figure>
+				<h1>Bra<span class="orange">n</span>ding</h1>
+				<figure onclick="window.location.href='branding/index.html'" class="corp-cc"></figure>
 			</article>
 			<span class="line"></span>
 
 			<article class="item">
-				<h1>Identidad<span class="green">G</span>ráfica</h1>
-				<figure class="iden-pet"></figure>
+				<h1><span class="pinky">I</span>dentity</h1>
+				<figure onclick="window.location.href='identity/index.html'" class="iden-pet"></figure>
 			</article>
 			<span class="line"></span>
 			<article class="item logoo">
-				<h1>Logo<span class="green">t</span>ipos</h1>
+				<h1>Lo<span class="green">g</span>os</h1>
 					<a class="logo logo-1" href="">
 						<span class="logo-cont">
 							<span class="logo-txt">
@@ -186,23 +229,11 @@
 		<footer>
 			<p>Diana Campos | di.disegno@gmail.com</p>
 		</footer>
-		<script src="js/cbpHorizontalMenu.js"></script>
+		<script src="js/cbpHorizontalMenu.min.js"></script>
 		<script type="text/javascript" src="js/lib.js"></script>
 		<script type="text/javascript">
 
-		function aboutMe(){
-			$( "#about-me" ).addClass( "about-me");
-			$( ".bio-me" ).addClass( "bio-show");
-			$( ".kill_me" ).addClass( "kill_ok");
-		}
-		function closeBio(){
-			$( "#about-me").removeClass('about-me');
-			$( ".bio-me").removeClass('bio-show');
-			$( ".kill_me").removeClass( 'kill_ok');
-		}
-		$('#Up-me').click( function() { 
-			//getElementById('#about-me').css('height','300px');
-		 } );
+		
 		</script>
 	
 	</body>
