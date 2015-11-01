@@ -537,7 +537,7 @@ footer{
 }
 .txt-me::before{
 	width: 100%;
-	content: '¡Escríbeme!';
+	content: 'Â¡EscrÃ­beme!';
 	font-family: my-Fontsem;
 	font-size: 22px;
 	color: #f44f7e;
@@ -814,7 +814,7 @@ h3{
 		height: 90px;
 		display: block;
 		background-size: contain;
-		margin: 0 0 0 30px;
+		margin: 0 auto;
 	}
 	#logo img{
 		width: 85%;
@@ -923,7 +923,7 @@ h3{
 
 @media screen and (max-width: 414px){
 	nav{
-		height: 120px;
+		height: 105px;
 	}
 	article figure{
 		margin: inherit;
@@ -954,7 +954,7 @@ h3{
 		padding-top: 10%;
 	}
 	.intro img{
-		padding-top: 22% !important;
+		padding-top: 19% !important;
 	}
 	
 	.labels{
@@ -1048,6 +1048,7 @@ h3{
 	}
 	.about-me{
 		height: 700px;
+		margin:29% auto; 
 	}
 	.bio-me{
 		width: 100%;
@@ -1106,8 +1107,11 @@ footer{
 		width: 60%;
 	}
 	.ciao img{
-		margin-top: 25%;
+		margin-top: 20%;
 	}
+	.page{
+	height: 200px;
+}
 }
 
 @media screen and (max-width: 320px){
@@ -1141,5 +1145,10 @@ footer{
 	.menuClose section ul li{
 		width: 200px;
 	}
-
+	.intro img {
+    padding-top: 21% !important;
+}
+.page{
+	height: 200px;
+}
 }
